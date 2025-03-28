@@ -20,7 +20,7 @@ public class AuthTest extends BaseTest{
                         TestData.VALID_LOGIN,
                         TestData.VALID_PASSWORD
                 );
-        mainPage.checkUserName("Карина Айтынбетова");
+        mainPage.checkUserName(TestData.USER_NAME);
     }
 
     // Тест ошибки при неверных данных

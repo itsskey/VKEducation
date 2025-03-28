@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import data.TestData;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +12,7 @@ public class ProfileTest extends BaseTest{
 
     @Before
     public void login() {
+
         loginPage.openPage()
                 .login(TestData.VALID_LOGIN, TestData.VALID_PASSWORD);
     }
@@ -20,13 +20,12 @@ public class ProfileTest extends BaseTest{
     @Test
     public void checkProfileInfo() {
         mainPage.openProfile()
-                .checkProfileName("Карина Айтынбетова");
+                .checkProfileName(TestData.USER_NAME);
     }
 
     @Test
     public void checkProfileBirthDateVisibility() {
-        new MainPage()
-                .openProfile()
+        mainPage.openProfile()
                 .checkBirthDateVisibility(TestData.USER_BIRTH_DATE);
     }
 }
