@@ -5,8 +5,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class ProfilePage {
-    private final SelenideElement profileName = $x("//*[@id=\"hook_Block_UserProfileInfo\"]/div/a");
-    private final SelenideElement birthDateField = $x("//*[@id=\"hook_Block_AboutUserRB\"]/div/div[4]/div/div[1]/div/div/span[2]");
+    private final SelenideElement profileName = $x("//*[@class='__user-profile-name-decorator']");
+    private final SelenideElement birthDateField = $x("//span[@data-type='AGE']");
 
     public ProfilePage checkProfileName(String name) {
         profileName.shouldHave(text(name));

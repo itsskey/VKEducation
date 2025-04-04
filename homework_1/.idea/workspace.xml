@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e19d46f6-7ea2-417e-888d-15815973a090" name="Changes" comment="" />
+    <list default="true" id="e19d46f6-7ea2-417e-888d-15815973a090" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1743772623525.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1743773493131.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1743773493131.0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AuthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AuthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/MainPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/ProfilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/ProfilePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/AuthTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/AuthTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/ProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/ProfileTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +90,7 @@
     "Maven.ok-autotests [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "fix__review-1",
+    "git-widget-placeholder": "homework-4",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/rkait/Desktop/VKEducation/homework_1/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
@@ -148,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfileTest.checkProfileInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.checkProfileFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ok-autotests" />
       <extension name="coverage">
         <pattern>
@@ -158,7 +173,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ProfileTest" />
-      <option name="METHOD_NAME" value="checkProfileInfo" />
+      <option name="METHOD_NAME" value="checkProfileFields" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,10 +182,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProfileTest" />
-        <item itemvalue="JUnit.ProfileTest.checkProfileInfo" />
         <item itemvalue="JUnit.AuthTest" />
-        <item itemvalue="JUnit.ProfileTest.checkProfileFields" />
         <item itemvalue="JUnit.AuthTest.successfulLogin (1)" />
+        <item itemvalue="JUnit.ProfileTest.checkProfileFields" />
+        <item itemvalue="JUnit.ProfileTest.checkProfileFields" />
       </list>
     </recent_temporary>
   </component>

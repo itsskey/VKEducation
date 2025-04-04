@@ -1,17 +1,20 @@
 package tests;
 
 import data.TestData;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.LoginPage;
 import pages.MainPage;
+import pages.ProfilePage;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class ProfileTest extends BaseTest{
     private MainPage mainPage;
+    private ProfilePage profilePage;
 
     @BeforeEach
     public void login() {
-        mainPage =  new LoginPage()
+        mainPage = new LoginPage()
                .verifyPageLoaded()
                .login(
                        TestData.VALID_LOGIN,
@@ -20,17 +23,25 @@ public class ProfileTest extends BaseTest{
 
     }
 
+
+    @Disabled("Отключен до тех пор, пока не будет реализован")
     @Test
-    public void checkProfileInfo() {
-        mainPage
-                .openProfile()
-                .checkProfileName(TestData.USER_NAME);
+    @Tag("profile")
+    @DisplayName("Добавление информации о себе")
+    void shouldUploadProfileInfo() {
+        profilePage=mainPage.openProfile();
     }
 
+
     @Test
-    public void checkProfileBirthDateVisibility() {
-        mainPage
-                .openProfile()
-                .checkBirthDateVisibility(TestData.USER_BIRTH_DATE);
+    @Tag("profile")
+    @DisplayName("Проверка отображения имени профиля и даты рождения")
+    public void checkProfileFields() {
+        profilePage=mainPage.openProfile();
+        assertAll(
+                () -> profilePage.checkProfileName(TestData.USER_NAME),
+                () -> profilePage.checkBirthDateVisibility(TestData.USER_BIRTH_DATE)
+        );
+
     }
 }

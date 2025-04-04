@@ -7,10 +7,10 @@ import static com.codeborne.selenide.Condition.text;
 
 public class LoginPage {
     //xpaths:
-    private final SelenideElement loginField = $x("//*[@id=\"field_email\"]");
-    private final SelenideElement passwordField = $x("//*[@id=\"field_password\"]");
-    private final SelenideElement submitButton = $("input[data-l^='t,sign_in']");
-    private final SelenideElement errorMessage = $(".input-e");
+    private final SelenideElement loginField = $x("//input[@name='st.email']");
+    private final SelenideElement passwordField = $x("//*[@name='st.password']");
+    private final SelenideElement submitButton = $x("//*[@value='Войти в Одноклассники']");
+    private final SelenideElement errorMessage = $x("//*[@class='input-e login_error']");
 
     public LoginPage verifyPageLoaded() {
         loginField.shouldBe(visible);
