@@ -4,6 +4,8 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import static com.codeborne.selenide.Selenide.open;
 
 
 public class BaseTest {
@@ -12,7 +14,12 @@ public class BaseTest {
         Configuration.baseUrl = "https://ok.ru";
         Configuration.browser = "chrome";
         Configuration.timeout = 10000;
-        // Другие глобальные настройки
+        Configuration.pageLoadTimeout = 30000;
+    }
+
+    @BeforeEach
+    public void lokalSetup() {
+        open("/");
     }
 
     @AfterEach
