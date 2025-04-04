@@ -7,25 +7,30 @@ import pages.LoginPage;
 import pages.MainPage;
 
 public class ProfileTest extends BaseTest{
-    private final LoginPage loginPage = new LoginPage();
-    private final MainPage mainPage = new MainPage();
+    private MainPage mainPage;
 
     @BeforeEach
     public void login() {
+        mainPage =  new LoginPage()
+               .verifyPageLoaded()
+               .login(
+                       TestData.VALID_LOGIN,
+                       TestData.VALID_PASSWORD
+               );
 
-        loginPage.openPage()
-                .login(TestData.VALID_LOGIN, TestData.VALID_PASSWORD);
     }
 
     @Test
     public void checkProfileInfo() {
-        mainPage.openProfile()
+        mainPage
+                .openProfile()
                 .checkProfileName(TestData.USER_NAME);
     }
 
     @Test
     public void checkProfileBirthDateVisibility() {
-        mainPage.openProfile()
+        mainPage
+                .openProfile()
                 .checkBirthDateVisibility(TestData.USER_BIRTH_DATE);
     }
 }
