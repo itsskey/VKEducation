@@ -2,12 +2,12 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.junit.After;
-import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 
 
 public class BaseTest {
-    @BeforeClass
+    @BeforeAll
     public static void globalSetup() {
         Configuration.baseUrl = "https://ok.ru";
         Configuration.browser = "chrome";
@@ -15,7 +15,7 @@ public class BaseTest {
         // Другие глобальные настройки
     }
 
-    @After
+    @AfterEach
     public void clearData() {
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();

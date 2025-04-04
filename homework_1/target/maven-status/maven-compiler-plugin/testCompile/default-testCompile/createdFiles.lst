@@ -1,0 +1,7 @@
+tests\ProfileTest.class
+data\TestData.class
+pages\LoginPage.class
+tests\BaseTest.class
+pages\ProfilePage.class
+pages\MainPage.class
+tests\AuthTest.class

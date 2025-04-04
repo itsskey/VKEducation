@@ -1,8 +1,8 @@
 package tests;
 
 import data.TestData;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 import pages.MainPage;
 
@@ -10,7 +10,7 @@ public class ProfileTest extends BaseTest{
     private final LoginPage loginPage = new LoginPage();
     private final MainPage mainPage = new MainPage();
 
-    @Before
+    @BeforeEach
     public void login() {
 
         loginPage.openPage()

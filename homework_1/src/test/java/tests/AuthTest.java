@@ -1,12 +1,9 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import data.TestData;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import pages.LoginPage;
 import pages.MainPage;
-import pages.ProfilePage;
 
 public class AuthTest extends BaseTest{
     private final LoginPage loginPage = new LoginPage();

@@ -1,0 +1,24 @@
+Index: src/test/java/tests/AuthTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tests;\r\n\r\nimport com.codeborne.selenide.Configuration;\r\nimport data.TestData;\r\nimport org.junit.BeforeClass;\r\nimport org.junit.Test;\r\nimport pages.LoginPage;\r\nimport pages.MainPage;\r\nimport pages.ProfilePage;\r\n\r\npublic class AuthTest extends BaseTest{\r\n    private final LoginPage loginPage = new LoginPage();\r\n    private final MainPage mainPage = new MainPage();\r\n\r\n    // Тест успешной авторизации\r\n    @Test\r\n    public void successfulLogin() {\r\n        loginPage.openPage()\r\n                .login(\r\n                        TestData.VALID_LOGIN,\r\n                        TestData.VALID_PASSWORD\r\n                );\r\n        mainPage.checkUserName(TestData.USER_NAME);\r\n    }\r\n\r\n    // Тест ошибки при неверных данных\r\n    @Test\r\n    public void invalidLoginError() {\r\n        loginPage.openPage()\r\n                .loginWithInvalidCreds(\r\n                        TestData.INVALID_LOGIN,\r\n                        TestData.INVALID_PASSWORD\r\n                )\r\n                .checkErrorMessage(\"Неправильно указан логин и/или пароль\");\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/tests/AuthTest.java b/src/test/java/tests/AuthTest.java
+--- a/src/test/java/tests/AuthTest.java	(revision e2675259ef117a80c020a5938c2b40d410014fb6)
++++ b/src/test/java/tests/AuthTest.java	(date 1743165399841)
+@@ -1,12 +1,10 @@
+ package tests;
+ 
+-import com.codeborne.selenide.Configuration;
+ import data.TestData;
+-import org.junit.BeforeClass;
+ import org.junit.Test;
+ import pages.LoginPage;
+ import pages.MainPage;
+-import pages.ProfilePage;
++
+ 
+ public class AuthTest extends BaseTest{
+     private final LoginPage loginPage = new LoginPage();
