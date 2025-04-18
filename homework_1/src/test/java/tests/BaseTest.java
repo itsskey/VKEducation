@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class BaseTest {
+public interface BaseTest {
     @BeforeAll
     public static void globalSetup() {
         Configuration.baseUrl = "https://ok.ru";
@@ -18,12 +18,12 @@ public class BaseTest {
     }
 
     @BeforeEach
-    public void lokalSetup() {
+    public default void lokalSetup() {
         open("/");
     }
 
     @AfterEach
-    public void clearData() {
+    public default void clearData() {
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
         Selenide.refresh();

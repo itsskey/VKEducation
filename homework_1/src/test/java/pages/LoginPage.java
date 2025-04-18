@@ -13,26 +13,27 @@ public class LoginPage {
     private final SelenideElement errorMessage = $x("//*[@class='input-e login_error']");
 
     public LoginPage verifyPageLoaded() {
-        loginField.shouldBe(visible);
-        passwordField.shouldBe(visible);
+        loginField.shouldBe(visible.because("Не отобразилось поле для ввода логина"));;
+        passwordField.shouldBe(visible.because("Не отобразилось поле для ввода пароля"));
         return this;
     }
 
-    public MainPage login(String login, String password) {
-        loginField.shouldBe(visible).setValue(login);
-        passwordField.shouldBe(visible).setValue(password);
-        submitButton.shouldBe(visible).click();
-        return new MainPage();
+    public HomePage login(String login, String password) {
+        loginField.shouldBe(visible.because("Поле логина не отображается перед вводом")).setValue(login);
+        passwordField.shouldBe(visible.because("Поле пароля не отображается перед вводом")).setValue(password);
+        submitButton.shouldBe(visible.because("Кнопка входа не отображается")).click();
+        return new HomePage();
     }
 
     public LoginPage loginWithInvalidCreds(String login, String password) {
-        loginField.shouldBe(visible).setValue(login);
-        passwordField.shouldBe(visible).setValue(password);
-        submitButton.shouldBe(visible).click();
+        loginField.shouldBe(visible.because("Поле логина не отображается перед вводом")).setValue(login);
+        passwordField.shouldBe(visible.because("Поле пароля не отображается перед вводом")).setValue(password);
+        submitButton.shouldBe(visible.because("Кнопка входа не отображается")).click();
         return this;
     }
 
-    public void checkErrorMessage(String text) {
-        errorMessage.shouldHave(text(text));
+    public String getErrorMessage() {
+        errorMessage.shouldBe(visible.because("Сообщение об ошибке не отображается"));
+        return errorMessage.getText();
     }
 }

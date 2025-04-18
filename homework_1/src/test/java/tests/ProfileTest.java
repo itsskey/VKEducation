@@ -3,18 +3,22 @@ package tests;
 import data.TestData;
 import org.junit.jupiter.api.*;
 import pages.LoginPage;
-import pages.MainPage;
+import pages.HomePage;
 import pages.ProfilePage;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
+import java.time.Month;
+import java.time.MonthDay;
+import java.time.Year;
 
-public class ProfileTest extends BaseTest{
-    private MainPage mainPage;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ProfileTest implements BaseTest{
+    private HomePage homePage;
     private ProfilePage profilePage;
 
     @BeforeEach
     public void login() {
-        mainPage = new LoginPage()
+        homePage = new LoginPage()
                .verifyPageLoaded()
                .login(
                        TestData.VALID_LOGIN,
@@ -24,24 +28,38 @@ public class ProfileTest extends BaseTest{
     }
 
 
-    @Disabled("Отключен до тех пор, пока не будет реализован")
+    @Disabled("Тест деактивирован до реализации функционала")
     @Test
     @Tag("profile")
     @DisplayName("Добавление информации о себе")
-    void shouldUploadProfileInfo() {
-        profilePage=mainPage.openProfile();
+    void testUploadProfileInfo() {
+        profilePage=homePage.openProfile();
     }
 
 
     @Test
     @Tag("profile")
     @DisplayName("Проверка отображения имени профиля и даты рождения")
-    public void checkProfileFields() {
-        profilePage=mainPage.openProfile();
+    public void testCheckProfileFields() {
+        profilePage=homePage.openProfile();
+        String actualName = profilePage.getProfileName();
+        String actualBirthDate = profilePage.getBirthDate();
+        int expectedAge = calculateExpectedAge();
         assertAll(
-                () -> profilePage.checkProfileName(TestData.USER_NAME),
-                () -> profilePage.checkBirthDateVisibility(TestData.USER_BIRTH_DATE)
+                // Проверка формата даты
+                ()->assertTrue(actualBirthDate.matches(TestData.USER_BIRTH_DATE_REGEX),
+                        "Формат даты не совпадает. Актуальное значение: '" + actualBirthDate + "'"),
+                 // Проверка расчета возраста
+                ()->assertTrue(actualBirthDate.contains("(" + expectedAge + " лет)"),
+                "Возраст не соответствует действительному. Ожидалось: " + expectedAge),
+                // Проверка имени
+                ()->assertEquals(TestData.USER_NAME, actualName,
+                        "Имя в профиле не совпадает с ожидаемым")
         );
-
+    }
+    private int calculateExpectedAge() {
+        int currentYear = Year.now().getValue();
+        boolean isBirthdayPassed = MonthDay.now().isAfter(MonthDay.of(Month.MARCH, 8));
+        return currentYear - 1997 - (isBirthdayPassed ? 0 : 1);
     }
 }
