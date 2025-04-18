@@ -1,0 +1,78 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e19d46f6-7ea2-417e-888d-15815973a090\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$/..\" value=\"homework-3\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;history&quot;: [\r\n    {\r\n      &quot;state&quot;: &quot;OPEN&quot;,\r\n      &quot;assignee&quot;: &quot;itsskey&quot;,\r\n      &quot;reviewState&quot;: &quot;REQUIRED&quot;\r\n    }\r\n  ],\r\n  &quot;lastFilter&quot;: {}\r\n}</component>\r\n  <component name=\"GitHubPullRequestState\">{\r\n  &quot;prStates&quot;: [\r\n    {\r\n      &quot;id&quot;: {\r\n        &quot;id&quot;: &quot;PR_kwDOOLfjMs6RXyHT&quot;,\r\n        &quot;number&quot;: 2\r\n      },\r\n      &quot;lastSeen&quot;: 1743756595056\r\n    }\r\n  ]\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;git@github.com:itsskey/VKEducation.git&quot;,\r\n    &quot;accountId&quot;: &quot;9abe9b62-a5e5-4731-bd75-fb2778e3b02d&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2urQIA7JQluACTolVPSMMPckArR\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Application.Main.executor\": \"Run\",\r\n    \"JUnit.AuthTest.executor\": \"Run\",\r\n    \"JUnit.AuthTest.invalidLoginError (1).executor\": \"Run\",\r\n    \"JUnit.AuthTest.invalidLoginError.executor\": \"Run\",\r\n    \"JUnit.AuthTest.successfulLogin (1).executor\": \"Run\",\r\n    \"JUnit.AuthTest.successfulLogin.executor\": \"Run\",\r\n    \"JUnit.ProfileTest.checkProfileBirthDateVisibility.executor\": \"Run\",\r\n    \"JUnit.ProfileTest.checkProfileInfo.executor\": \"Run\",\r\n    \"JUnit.ProfileTest.executor\": \"Run\",\r\n    \"Maven.ok-autotests [package].executor\": \"Run\",\r\n    \"Maven.ok-autotests [test].executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"RunOnceActivity.git.unshallow\": \"true\",\r\n    \"git-widget-placeholder\": \"fix__review-1\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"onboarding.tips.debug.path\": \"C:/Users/rkait/Desktop/VKEducation/homework_1/src/main/java/org/example/Main.java\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"settings.editor.selected.configurable\": \"terminal\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\"JUnit.ProfileTest\">\r\n    <configuration name=\"AuthTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ok-autotests\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.AuthTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AuthTest.successfulLogin (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ok-autotests\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.AuthTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"successfulLogin\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProfileTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ok-autotests\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.ProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProfileTest.checkProfileFields\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ok-autotests\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.ProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkProfileFields\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProfileTest.checkProfileInfo\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ok-autotests\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.ProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkProfileInfo\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.ProfileTest\" />\r\n        <item itemvalue=\"JUnit.ProfileTest.checkProfileInfo\" />\r\n        <item itemvalue=\"JUnit.AuthTest\" />\r\n        <item itemvalue=\"JUnit.ProfileTest.checkProfileFields\" />\r\n        <item itemvalue=\"JUnit.AuthTest.successfulLogin (1)\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e19d46f6-7ea2-417e-888d-15815973a090\" name=\"Changes\" comment=\"\" />\r\n      <created>1743004133930</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1743004133930</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"RECENT_FILTERS\">\r\n      <map>\r\n        <entry key=\"Branch\">\r\n          <value>\r\n            <list>\r\n              <RecentGroup>\r\n                <option name=\"FILTER_VALUES\">\r\n                  <option value=\"homework-3\" />\r\n                </option>\r\n              </RecentGroup>\r\n            </list>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/homework-3\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 233c4657fcf9e1608185d033cedb63e43e2783c7)
++++ b/.idea/workspace.xml	(date 1743775026289)
+@@ -60,30 +60,30 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Application.Main.executor": "Run",
+-    "JUnit.AuthTest.executor": "Run",
+-    "JUnit.AuthTest.invalidLoginError (1).executor": "Run",
+-    "JUnit.AuthTest.invalidLoginError.executor": "Run",
+-    "JUnit.AuthTest.successfulLogin (1).executor": "Run",
+-    "JUnit.AuthTest.successfulLogin.executor": "Run",
+-    "JUnit.ProfileTest.checkProfileBirthDateVisibility.executor": "Run",
+-    "JUnit.ProfileTest.checkProfileInfo.executor": "Run",
+-    "JUnit.ProfileTest.executor": "Run",
+-    "Maven.ok-autotests [package].executor": "Run",
+-    "Maven.ok-autotests [test].executor": "Run",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "RunOnceActivity.git.unshallow": "true",
+-    "git-widget-placeholder": "fix__review-1",
+-    "kotlin-language-version-configured": "true",
+-    "onboarding.tips.debug.path": "C:/Users/rkait/Desktop/VKEducation/homework_1/src/main/java/org/example/Main.java",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0",
+-    "settings.editor.selected.configurable": "terminal"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.AuthTest.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.AuthTest.invalidLoginError (1).executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.AuthTest.invalidLoginError.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.AuthTest.successfulLogin (1).executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.AuthTest.successfulLogin.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ProfileTest.checkProfileBirthDateVisibility.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ProfileTest.checkProfileInfo.executor&quot;: &quot;Run&quot;,
++    &quot;JUnit.ProfileTest.executor&quot;: &quot;Run&quot;,
++    &quot;Maven.ok-autotests [package].executor&quot;: &quot;Run&quot;,
++    &quot;Maven.ok-autotests [test].executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;fix__review-1&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/rkait/Desktop/VKEducation/homework_1/src/main/java/org/example/Main.java&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RunManager" selected="JUnit.ProfileTest">
+     <configuration name="AuthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="ok-autotests" />
+@@ -166,11 +166,11 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.ProfileTest" />
+         <item itemvalue="JUnit.ProfileTest.checkProfileInfo" />
+-        <item itemvalue="JUnit.AuthTest" />
+         <item itemvalue="JUnit.ProfileTest.checkProfileFields" />
++        <item itemvalue="JUnit.ProfileTest" />
+         <item itemvalue="JUnit.AuthTest.successfulLogin (1)" />
++        <item itemvalue="JUnit.AuthTest" />
+       </list>
+     </recent_temporary>
+   </component>

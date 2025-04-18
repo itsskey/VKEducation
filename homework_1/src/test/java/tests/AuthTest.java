@@ -11,18 +11,26 @@ import org.junit.jupiter.params.provider.MethodSource;
 import pages.LoginPage;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @Timeout(50)
-public class AuthTest extends BaseTest{
+public class AuthTest implements BaseTest{
 
     @Test
     @Tag("auth")
     @DisplayName("Тест успешной авторизации")
-    public void successfulLogin() {
-        new LoginPage()
+    public void testSuccessfulLogin() {
+        String actualUserName = new LoginPage()
                 .verifyPageLoaded()
                 .login(TestData.VALID_LOGIN, TestData.VALID_PASSWORD)
-                .checkUserName(TestData.USER_NAME);
+                .getUserName();
+
+        assertEquals(
+                TestData.USER_NAME,
+                actualUserName,
+                "Имя пользователя не совпадает"
+        );
     }
 
 
@@ -30,15 +38,21 @@ public class AuthTest extends BaseTest{
     @ParameterizedTest
     @Tag("auth")
     @MethodSource("invalidData")
-    public void invalidLoginError(String login,
+    public void testInvalidLoginError(String login,
                                   String password,
                                   String expectedError) {
-        new LoginPage()
+        String actualError = new LoginPage()
                 .verifyPageLoaded()
                 .loginWithInvalidCreds(
                         login, password
                 )
-                .checkErrorMessage(expectedError);
+                .getErrorMessage();
+
+        assertEquals(
+                expectedError,
+                actualError,
+                "Сообщение об ошибке не совпадает"
+        );
     }
     private static Stream<Arguments> invalidData() {
         return Stream.of(

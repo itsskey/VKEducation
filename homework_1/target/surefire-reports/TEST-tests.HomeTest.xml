@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.AuthTest" time="32.214" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.HomeTest" time="13.082" tests="2" errors="0" skipped="1" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,17 +58,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testSuccessfulLogin" classname="tests.AuthTest" time="18.975">
-    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-апр. 19, 2025 1:06:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find CDP implementation matching 135
-апр. 19, 2025 1:06:08 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 135.0.7049.95. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.17.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-]]></system-err>
+  <testcase name="testUploadProfileInfo" classname="tests.HomeTest" time="0.0">
+    <skipped message="Тест деактивирован до реализации функционала"/>
   </testcase>
-  <testcase name="testInvalidLoginError(String, String, String)[1]" classname="tests.AuthTest" time="4.581"/>
-  <testcase name="testInvalidLoginError(String, String, String)[2]" classname="tests.AuthTest" time="3.367"/>
-  <testcase name="testInvalidLoginError(String, String, String)[3]" classname="tests.AuthTest" time="5.124"/>
+  <testcase name="testCheckProfileFields" classname="tests.HomeTest" time="13.063"/>
 </testsuite>

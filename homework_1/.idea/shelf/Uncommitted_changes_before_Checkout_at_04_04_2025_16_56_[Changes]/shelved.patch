@@ -1,0 +1,130 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"RunManager\" selected=\"JUnit.AuthTest.invalidLoginError\">\r\n    <configuration name=\"AuthTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"homework_1\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.AuthTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AuthTest.invalidLoginError\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"homework_1\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.AuthTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"invalidLoginError\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AuthTest.successfulLogin\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"homework_1\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.AuthTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"successfulLogin\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProfileTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"homework_1\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.ProfileTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProfileTest.checkProfileBirthDateVisibility\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"homework_1\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.ProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkProfileBirthDateVisibility\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProfileTest.checkProfileFields\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ok-autotests\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"tests.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"tests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"tests.ProfileTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"checkProfileFields\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.ProfileTest.checkProfileBirthDateVisibility\" />\r\n        <item itemvalue=\"JUnit.ProfileTest\" />\r\n        <item itemvalue=\"JUnit.AuthTest.successfulLogin\" />\r\n        <item itemvalue=\"JUnit.AuthTest.invalidLoginError\" />\r\n        <item itemvalue=\"JUnit.AuthTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 30d86e2138fc0f1d0d11e47385f5eb762bfb626c)
++++ b/.idea/workspace.xml	(date 1743774915633)
+@@ -1,5 +1,64 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="e19d46f6-7ea2-417e-888d-15815973a090" name="Changes" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$/.." value="homework-4" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++  </component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "git@github.com:itsskey/VKEducation.git",
++    "accountId": "9abe9b62-a5e5-4731-bd75-fb2778e3b02d"
++  }
++}]]></component>
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Application.Main.executor": "Run",
++    "JUnit.AuthTest.executor": "Run",
++    "JUnit.AuthTest.invalidLoginError (1).executor": "Run",
++    "JUnit.AuthTest.invalidLoginError.executor": "Run",
++    "JUnit.AuthTest.successfulLogin (1).executor": "Run",
++    "JUnit.AuthTest.successfulLogin.executor": "Run",
++    "JUnit.ProfileTest.checkProfileBirthDateVisibility.executor": "Run",
++    "JUnit.ProfileTest.checkProfileInfo.executor": "Run",
++    "JUnit.ProfileTest.executor": "Run",
++    "Maven.ok-autotests [package].executor": "Run",
++    "Maven.ok-autotests [test].executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "git-widget-placeholder": "homework-4",
++    "kotlin-language-version-configured": "true",
++    "onboarding.tips.debug.path": "C:/Users/rkait/Desktop/VKEducation/homework_1/src/main/java/org/example/Main.java",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "terminal"
++  }
++}]]></component>
+   <component name="RunManager" selected="JUnit.AuthTest.invalidLoginError">
+     <configuration name="AuthTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="homework_1" />
+@@ -105,4 +164,53 @@
+       </list>
+     </recent_temporary>
+   </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="e19d46f6-7ea2-417e-888d-15815973a090" name="Changes" comment="" />
++      <created>1743004133930</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1743004133930</updated>
++    </task>
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="RECENT_FILTERS">
++      <map>
++        <entry key="Branch">
++          <value>
++            <list>
++              <RecentGroup>
++                <option name="FILTER_VALUES">
++                  <option value="homework-3" />
++                </option>
++              </RecentGroup>
++            </list>
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/homework-3" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
