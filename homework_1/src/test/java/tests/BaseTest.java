@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import static com.codeborne.selenide.Selenide.open;
 
-
 public interface BaseTest {
     @BeforeAll
     public static void globalSetup() {

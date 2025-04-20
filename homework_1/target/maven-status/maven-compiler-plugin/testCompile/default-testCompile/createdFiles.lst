@@ -1,8 +1,13 @@
+tests\AuthenticatedTest.class
+pages\BasePage.class
 tests\ProfileTest.class
 tests\HomeTest.class
-data\TestData.class
+pages\elements\ToolbarWrapper.class
 pages\LoginPage.class
+data\UserCredentials.class
 pages\HomePage.class
 tests\BaseTest.class
 pages\ProfilePage.class
+data\TestData.class
+data\AuthDataProvider.class
 tests\AuthTest.class

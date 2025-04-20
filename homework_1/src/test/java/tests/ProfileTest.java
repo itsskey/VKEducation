@@ -2,31 +2,22 @@ package tests;
 
 import data.TestData;
 import org.junit.jupiter.api.*;
-import pages.LoginPage;
 import pages.HomePage;
 import pages.ProfilePage;
-
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ProfileTest implements BaseTest{
+public class ProfileTest implements AuthenticatedTest{
     private HomePage homePage;
     private ProfilePage profilePage;
 
-    @BeforeEach
-    public void login() {
-        homePage = new LoginPage()
-               .verifyPageLoaded()
-               .login(
-                       TestData.VALID_LOGIN,
-                       TestData.VALID_PASSWORD
-               );
-
+    public void afterLoginSetup(HomePage homePage) {
+        this.homePage = homePage;
+        this.profilePage = homePage.openProfile();
     }
-
 
     @Disabled("Тест деактивирован до реализации функционала")
     @Test

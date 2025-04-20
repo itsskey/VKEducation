@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tests.HomeTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 13.08 s -- in tests.HomeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.61 s -- in tests.HomeTest

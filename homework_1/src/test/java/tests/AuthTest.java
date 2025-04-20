@@ -1,16 +1,18 @@
 package tests;
 
+import data.AuthDataProvider;
 import data.TestData;
+import data.UserCredentials;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import pages.LoginPage;
 import java.util.stream.Stream;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -22,8 +24,8 @@ public class AuthTest implements BaseTest{
     @DisplayName("Тест успешной авторизации")
     public void testSuccessfulLogin() {
         String actualUserName = new LoginPage()
-                .verifyPageLoaded()
-                .login(TestData.VALID_LOGIN, TestData.VALID_PASSWORD)
+                .isLoaded()
+                .login(TestData.VALID_USER)
                 .getUserName();
 
         assertEquals(
@@ -36,16 +38,13 @@ public class AuthTest implements BaseTest{
 
     @DisplayName("Ошибка при неверных данных")
     @ParameterizedTest
+    @ArgumentsSource(AuthDataProvider.class)
     @Tag("auth")
-    @MethodSource("invalidData")
-    public void testInvalidLoginError(String login,
-                                  String password,
-                                  String expectedError) {
+    public void testInvalidLoginError(UserCredentials userWithWrongCredentials,
+                                      String expectedError) {
         String actualError = new LoginPage()
-                .verifyPageLoaded()
-                .loginWithInvalidCreds(
-                        login, password
-                )
+                .isLoaded()
+                .loginWithInvalidCreds(userWithWrongCredentials)
                 .getErrorMessage();
 
         assertEquals(
@@ -54,19 +53,5 @@ public class AuthTest implements BaseTest{
                 "Сообщение об ошибке не совпадает"
         );
     }
-    private static Stream<Arguments> invalidData() {
-        return Stream.of(
-                Arguments.of(
-                        TestData.INVALID_LOGIN,
-                        TestData.INVALID_PASSWORD,
-                        "Неправильно указан логин и/или пароль"
-                ),
-                Arguments.of(null,
-                        null,
-                        "Введите логин"),
-                Arguments.of(TestData.INVALID_LOGIN,
-                        null,
-                        "Введите пароль")
-        );
-    }
+
 }
