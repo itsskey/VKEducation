@@ -5,21 +5,21 @@ import org.junit.jupiter.api.BeforeEach;
 import pages.HomePage;
 import pages.LoginPage;
 
-public interface AuthenticatedTest extends BaseTest{
+public abstract class AuthenticatedTest extends BaseTest{
     @BeforeEach
     @Override
-    default void lokalSetup() {
-        BaseTest.super.lokalSetup();
+    void lokalSetup() {
+        super.lokalSetup();
         HomePage homePage = performLogin();
         afterLoginSetup(homePage);
     }
 
     private HomePage performLogin() {
         return new LoginPage()
-                .isLoaded()
-                .login(TestData.VALID_USER);
+                .loginWith(TestData.VALID_USER)
+                .asValidUser();
     }
-    void afterLoginSetup(HomePage homePage);
+    abstract void afterLoginSetup(HomePage homePage);
 
 
 }

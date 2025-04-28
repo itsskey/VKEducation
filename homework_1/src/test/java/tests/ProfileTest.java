@@ -7,15 +7,12 @@ import pages.ProfilePage;
 import java.time.Month;
 import java.time.MonthDay;
 import java.time.Year;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ProfileTest implements AuthenticatedTest{
-    private HomePage homePage;
+public class ProfileTest extends AuthenticatedTest{
     private ProfilePage profilePage;
 
     public void afterLoginSetup(HomePage homePage) {
-        this.homePage = homePage;
         this.profilePage = homePage.openProfile();
     }
 
@@ -23,25 +20,23 @@ public class ProfileTest implements AuthenticatedTest{
     @Test
     @Tag("profile")
     @DisplayName("Добавление информации о себе")
-    void testUploadProfileInfo() {
-        profilePage=homePage.openProfile();
-    }
+    void testUploadProfileInfo() {    }
 
 
     @Test
     @Tag("profile")
     @DisplayName("Проверка отображения имени профиля и даты рождения")
     public void testCheckProfileFields() {
-        profilePage=homePage.openProfile();
-        String actualName = profilePage.getProfileName();
+        String actualName = profilePage.getPROFILE_NAME();
         String actualBirthDate = profilePage.getBirthDate();
         int expectedAge = calculateExpectedAge();
+        String formatAge = formatAge(expectedAge);
         assertAll(
                 // Проверка формата даты
                 ()->assertTrue(actualBirthDate.matches(TestData.USER_BIRTH_DATE_REGEX),
                         "Формат даты не совпадает. Актуальное значение: '" + actualBirthDate + "'"),
                  // Проверка расчета возраста
-                ()->assertTrue(actualBirthDate.contains("(" + expectedAge + " лет)"),
+                ()->assertTrue(actualBirthDate.contains("(" + expectedAge + " "+formatAge+ ")"),
                 "Возраст не соответствует действительному. Ожидалось: " + expectedAge),
                 // Проверка имени
                 ()->assertEquals(TestData.USER_NAME, actualName,
@@ -51,6 +46,15 @@ public class ProfileTest implements AuthenticatedTest{
     private int calculateExpectedAge() {
         int currentYear = Year.now().getValue();
         boolean isBirthdayPassed = MonthDay.now().isAfter(MonthDay.of(Month.MARCH, 8));
-        return currentYear - 1997 - (isBirthdayPassed ? 0 : 1);
+        return currentYear - TestData.USER_BIRTH_YEAR - (isBirthdayPassed ? 0 : 1);
+    }
+    // Метод для проверки год/года/лет
+    private String formatAge(int age){
+        if ((age%100 >= 5 && age%100 <= 20) || age%10 >= 5 || age%10 == 0)
+            return "лет";
+        else if (age%10 >= 2 && age%10<=4)
+            return "год";
+        else
+            return "года";
     }
 }

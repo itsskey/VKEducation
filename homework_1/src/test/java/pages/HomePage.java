@@ -2,32 +2,38 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import pages.elements.ToolbarWrapper;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HomePage implements BasePage{
-    private final ToolbarWrapper toolbar = new ToolbarWrapper();
+    private final ToolbarWrapper TOOLBAR = new ToolbarWrapper();
     //Локаторы:
-    private final SelenideElement userProfileLink = $x("//*[@data-l=\"t,userPage\"]");
-    private final SelenideElement userName = $x("//*[contains(@data-l, 'userPage')]");
+    private final SelenideElement USER_PROFILE_LINK = $x("//*[@data-l='t,userPage']");
 
+    public HomePage() {
+        isLoaded(); // Автоматическая проверка при создании страницы
+    }
 
     public HomePage isLoaded() {
-        checkElementVisibility(userProfileLink, "Главная страница не загрузилась");
-        checkElementVisibility(userName, "Имя пользователя не отображается");
-        toolbar.isLoaded();
+        USER_PROFILE_LINK.shouldBe(visible.because("Главная страница не загрузилась"));
+        TOOLBAR.isLoaded();
         return this;
     }
 
     public ToolbarWrapper getToolbar() {
-        return toolbar;
+        return TOOLBAR;
     }
 
     public String getUserName() {
-        return userName.getText();
+        return USER_PROFILE_LINK
+                .shouldBe(visible.because("Главная страница не загрузилась"))
+                .getText();
     }
 
     public ProfilePage openProfile() {
-        userProfileLink.click();
+        USER_PROFILE_LINK
+                .shouldBe(visible.because("Главная страница не загрузилась"))
+                .click();
         return new ProfilePage().isLoaded();
     }
 }

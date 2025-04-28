@@ -1,21 +1,28 @@
 package tests;
 
-import data.TestData;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import pages.HomePage;
-import pages.LoginPage;
-
+import static com.codeborne.selenide.Selenide.refresh;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-public class HomeTest implements AuthenticatedTest{
+public class HomeTest extends AuthenticatedTest{
     private HomePage homePage;
+    private final String EN = "en";
 
+    @Override
     public void afterLoginSetup(HomePage homePage) {
         this.homePage = homePage;
+        refresh();
+    }
+
+    @AfterEach
+    void switchLanguageToRussian(){
+        if (homePage != null) {
+            homePage
+                    .getToolbar()
+                    .openSettingsMenu()
+                    .switchToRussian();
+        }
     }
 
 
@@ -23,25 +30,13 @@ public class HomeTest implements AuthenticatedTest{
     @Tag("home")
     @DisplayName("Проверка смены языка интерфейса на английский")
     void testLanguageSwitch() {
-        try {
             String actualLanguage = homePage
                     .getToolbar()
                     .openSettingsMenu()
                     .switchToEnglish()
                     .getHtmlLangAttribute();
 
-            assertEquals("en", actualLanguage,
+            assertEquals(EN, actualLanguage,
                     "Язык интерфейса не был изменен на английский");
-        }finally {
-            String newLanguage = homePage
-                    .getToolbar()
-                    .openSettingsMenu()
-                    .switchToRussian()
-                    .getHtmlLangAttribute();
-
-            assertEquals("ru", newLanguage,
-                    "Язык интерфейса не был изменен на русский");
-        }
     }
-
 }
