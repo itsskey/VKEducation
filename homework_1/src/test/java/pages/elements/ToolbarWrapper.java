@@ -4,44 +4,45 @@ import com.codeborne.selenide.SelenideElement;
 import pages.BasePage;
 import java.util.Objects;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ToolbarWrapper implements BasePage {
-    private final SelenideElement rootElement;
     //Локаторы
-    private final SelenideElement toolBarArrow = $x("//*[@class='ucard-mini_cnt']");
-    private final SelenideElement switchLanguageButtonFromRu = $x("//*[contains(@class, 'u-menu_tx') and contains(text(), 'Русский')]");
-    private final SelenideElement switchLanguageButtonFromEn = $x("//*[contains(@class, 'u-menu_tx') and contains(text(), 'English')]");
-    private final SelenideElement chooseEnglishLanguageButton = $x("//*[contains(@class, 'sel-lang') and contains(text(), 'English')]");
-    private final SelenideElement chooseRussianLanguageButton = $x("//*[contains(@class, 'sel-lang') and contains(text(), 'Русский')]");
-
-    public ToolbarWrapper() {
-        this.rootElement = $x("//*[contains(@class,'toolbar_decor')]");
-    }
+    private final String ROOT_XPATH =".//*[contains(@class,'toolbar_decor')]";
+    private final String TOOLBAR_ARROW_XPATH = ".//*[contains(@class,'toolbar_ucard')]";
+    private final String SWITCH_LANGUAGE_FROM_RU_XPATH = ".//*[contains(@class, 'u-menu_tx') and contains(text(), 'Русский')]";
+    private final String SWITCH_LANGUAGE_FROM_EN_XPATH = ".//*[contains(@class, 'u-menu_tx') and contains(text(), 'English')]";
+    private final String CHOOSE_EN_BUTTON_XPATH = ".//*[contains(@class, 'sel-lang') and contains(text(), 'English')]";
+    private final String CHOOSE_RU_BUTTON_XPATH = ".//*[contains(@class, 'sel-lang') and contains(text(), 'Русский')]";
+    private final SelenideElement ROOT = $x(ROOT_XPATH);
 
     public ToolbarWrapper isLoaded() {
-        checkElementVisibility(rootElement,"Тулбар не отображается");
+        ROOT.shouldBe(visible.because("Тулбар не отображается"));
         return this;
     }
 
     public ToolbarWrapper openSettingsMenu() {
-        toolBarArrow
+        ROOT
+                .find(byXpath(TOOLBAR_ARROW_XPATH))
                 .shouldBe(visible.because("Стрелка открытия меню не отображается"))
                 .click();
         return this;
     }
 
     public ToolbarWrapper switchToEnglish(){
-        switchLanguageButtonFromRu.click();
-        chooseEnglishLanguageButton.click();
+        ROOT
+                .find(byXpath(SWITCH_LANGUAGE_FROM_RU_XPATH))
+                .click();
+        $(byXpath(CHOOSE_EN_BUTTON_XPATH)).click();
         return this;
     }
 
-    public ToolbarWrapper switchToRussian() {
-        switchLanguageButtonFromEn.click();
-        chooseRussianLanguageButton.click();
-        return this;
+    public void switchToRussian() {
+        ROOT
+                .find(byXpath(SWITCH_LANGUAGE_FROM_EN_XPATH))
+                .click();
+        $(byXpath(CHOOSE_RU_BUTTON_XPATH)).click();
     }
 
     public String getHtmlLangAttribute() {
