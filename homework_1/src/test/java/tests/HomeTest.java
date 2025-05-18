@@ -5,9 +5,9 @@ import pages.HomePage;
 import static com.codeborne.selenide.Selenide.refresh;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@TestMethodOrder(MethodOrderer.Random.class)
 public class HomeTest extends AuthenticatedTest{
     private HomePage homePage;
-    private final String EN = "en";
 
     @Override
     public void afterLoginSetup(HomePage homePage) {
@@ -20,11 +20,10 @@ public class HomeTest extends AuthenticatedTest{
         if (homePage != null) {
             homePage
                     .getToolbar()
-                    .openSettingsMenu()
                     .switchToRussian();
+            refresh();
         }
     }
-
 
     @Test
     @Tag("home")
@@ -32,11 +31,12 @@ public class HomeTest extends AuthenticatedTest{
     void testLanguageSwitch() {
             String actualLanguage = homePage
                     .getToolbar()
-                    .openSettingsMenu()
                     .switchToEnglish()
                     .getHtmlLangAttribute();
+            refresh();
 
-            assertEquals(EN, actualLanguage,
+        String EN = "en";
+        assertEquals(EN, actualLanguage,
                     "Язык интерфейса не был изменен на английский");
     }
 }

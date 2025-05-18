@@ -7,23 +7,20 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class LoginPage implements BasePage{
     //Локаторы:
-    private final SelenideElement LOGIN_FIELD = $x("//input[@name='st.email']");
-    private final SelenideElement PASSWORD_FIELD = $x("//*[@name='st.password']");
-    private final SelenideElement SUBMIT_BUTTON = $x("//*[@value='Войти в Одноклассники']");
-    private final SelenideElement ERROR_MESSAGE = $x("//*[@class='input-e login_error']");
+    private static final SelenideElement LOGIN_FIELD = $x("//input[@name='st.email']");
+    private static final SelenideElement PASSWORD_FIELD = $x("//*[@name='st.password']");
+    private static final SelenideElement SUBMIT_BUTTON = $x("//*[contains(@value, 'Войти')]");
+    private static final SelenideElement ERROR_MESSAGE = $x("//*[@class='input-e login_error']");
 
     public LoginPage() {
         isLoaded();
     }
 
+    @Override
     public LoginPage isLoaded() {
         LOGIN_FIELD.shouldBe(visible.because("Поле логина не отобразилось"));
         PASSWORD_FIELD.shouldBe(visible.because("Поле пароля не отобразилось"));
         return this;
-    }
-
-    public LoginPromise loginWith(UserCredentials credentials){
-        return new LoginPromise(this, credentials);
     }
 
     public String getErrorMessage() {
@@ -31,6 +28,9 @@ public class LoginPage implements BasePage{
         return ERROR_MESSAGE.getText();
     }
 
+    public LoginPromise loginWith(UserCredentials credentials){
+        return new LoginPromise(this, credentials);
+    }
 
     // Использование паттерна Promise
     public static class LoginPromise{
@@ -39,7 +39,7 @@ public class LoginPage implements BasePage{
 
         public LoginPromise(LoginPage loginPage, UserCredentials userCredentials){
             this.LOGIN_PAGE=loginPage;
-            this.USER_CREDS =userCredentials;
+            this.USER_CREDS=userCredentials;
         }
 
         private void performLoginActions(){

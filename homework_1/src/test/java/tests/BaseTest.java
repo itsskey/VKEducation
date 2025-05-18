@@ -9,22 +9,21 @@ import static com.codeborne.selenide.Selenide.open;
 
 public abstract class BaseTest {
     @BeforeAll
-    static void globalSetup() {
+    public static void globalSetup() {
         Configuration.baseUrl = "https://ok.ru";
         Configuration.browser = "chrome";
-        Configuration.timeout = 10000;
+        Configuration.timeout = 10_000;
         Configuration.pageLoadTimeout = 30000;
     }
 
     @BeforeEach
-    void lokalSetup() {
+    public void localSetup() {
         open("/");
     }
 
     @AfterEach
-    void clearData() {
+    public void clearData() {
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
-        Selenide.refresh();
     }
 }

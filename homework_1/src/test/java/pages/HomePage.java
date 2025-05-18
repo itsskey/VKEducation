@@ -1,39 +1,30 @@
 package pages;
 
-import com.codeborne.selenide.SelenideElement;
+import pages.elements.SidebarWrapper;
 import pages.elements.ToolbarWrapper;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
 
 public class HomePage implements BasePage{
-    private final ToolbarWrapper TOOLBAR = new ToolbarWrapper();
-    //Локаторы:
-    private final SelenideElement USER_PROFILE_LINK = $x("//*[@data-l='t,userPage']");
+    // Тулбар
+    private static final ToolbarWrapper TOOLBAR = new ToolbarWrapper();
+    // Боковое меню
+    private static final SidebarWrapper SIDEBAR = new SidebarWrapper();
 
     public HomePage() {
         isLoaded(); // Автоматическая проверка при создании страницы
     }
 
+    @Override
     public HomePage isLoaded() {
-        USER_PROFILE_LINK.shouldBe(visible.because("Главная страница не загрузилась"));
+        SIDEBAR.isLoaded();
         TOOLBAR.isLoaded();
         return this;
     }
 
+    public SidebarWrapper getSidebar() {
+        return SIDEBAR.isLoaded();
+    }
+
     public ToolbarWrapper getToolbar() {
         return TOOLBAR;
-    }
-
-    public String getUserName() {
-        return USER_PROFILE_LINK
-                .shouldBe(visible.because("Главная страница не загрузилась"))
-                .getText();
-    }
-
-    public ProfilePage openProfile() {
-        USER_PROFILE_LINK
-                .shouldBe(visible.because("Главная страница не загрузилась"))
-                .click();
-        return new ProfilePage().isLoaded();
     }
 }

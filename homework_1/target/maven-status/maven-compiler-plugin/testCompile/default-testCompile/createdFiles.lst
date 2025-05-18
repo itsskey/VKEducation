@@ -8,6 +8,7 @@ data\UserCredentials.class
 pages\HomePage.class
 tests\BaseTest.class
 pages\ProfilePage.class
+pages\elements\SidebarWrapper.class
 pages\LoginPage$LoginPromise.class
 data\TestData.class
 data\AuthDataProvider.class

@@ -8,8 +8,8 @@ import pages.LoginPage;
 public abstract class AuthenticatedTest extends BaseTest{
     @BeforeEach
     @Override
-    void lokalSetup() {
-        super.lokalSetup();
+    public void localSetup() {
+        super.localSetup();
         HomePage homePage = performLogin();
         afterLoginSetup(homePage);
     }
@@ -19,7 +19,6 @@ public abstract class AuthenticatedTest extends BaseTest{
                 .loginWith(TestData.VALID_USER)
                 .asValidUser();
     }
-    abstract void afterLoginSetup(HomePage homePage);
 
-
+    public abstract void afterLoginSetup(HomePage homePage);
 }
